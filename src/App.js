@@ -1,9 +1,7 @@
 import { useState } from "react";
 
 import "./App.css";
-import Header from "./Header";
-import Display from "./Display";
-import Button from "./Button";
+import Counter from "./Counter";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,10 +10,7 @@ function App() {
   };
   return (
     <div className="App">
-      <Header title="React App" />
-      <Display count={count} />
-      <Button handleCount={handleCount} label="Add 1" />
-      <Button handleCount={handleCount} label="Minus 1" />
+      <Counter count={count} handleCount={handleCount} />
     </div>
   );
 }
