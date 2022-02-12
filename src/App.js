@@ -6,13 +6,18 @@ import TodoPage from "./components/TodoPage";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [todos, setTodos] = useState([]);
   const handleCount = (value) => {
     setCount(count + value);
+  };
+  const todoHandler = (newTask) => {
+    const newTodos = [...todos, newTask];
+    setTodos(newTodos);
   };
   return (
     <div className="App">
       <Counter count={count} handleCount={handleCount} />
-      <TodoPage />
+      <TodoPage todoHandler={todoHandler} />
     </div>
   );
 }
