@@ -21,6 +21,7 @@ const HeaderContainer = ({ todoHandler }) => {
         <InputBtn
           handleClick={() => {
             todoHandler(inputValue);
+            setInputValue("");
           }}
         />
       </div>

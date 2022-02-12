@@ -14,6 +14,7 @@ function App() {
     const newTodos = [...todos, newTask];
     setTodos(newTodos);
   };
+  console.log("list of todos::", todos);
   return (
     <div className="App">
       <Counter count={count} handleCount={handleCount} />
