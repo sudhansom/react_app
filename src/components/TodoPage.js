@@ -1,7 +1,13 @@
 import React from "react";
 
+import HeaderContainer from "./HeaderContainer";
+
 const TodoPage = () => {
-  return <div></div>;
+  return (
+    <div>
+      <HeaderContainer />
+    </div>
+  );
 };
 
 export default TodoPage;
