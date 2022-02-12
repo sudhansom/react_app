@@ -1,7 +1,11 @@
 import React from "react";
 
 const InputBtn = () => {
-  return <div></div>;
+  return (
+    <div>
+      <button>Add Task</button>
+    </div>
+  );
 };
 
 export default InputBtn;
