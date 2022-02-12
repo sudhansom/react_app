@@ -2,10 +2,10 @@ import React from "react";
 
 import HeaderContainer from "./HeaderContainer";
 
-const TodoPage = () => {
+const TodoPage = ({ todoHandler }) => {
   return (
     <div>
-      <HeaderContainer />
+      <HeaderContainer todoHandler={todoHandler} />
     </div>
   );
 };

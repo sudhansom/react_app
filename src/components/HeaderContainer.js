@@ -3,12 +3,9 @@ import React, { useState } from "react";
 import TextInput from "./TextInput";
 import InputBtn from "./InputBtn";
 
-const HeaderContainer = () => {
+const HeaderContainer = ({ todoHandler }) => {
   const [inputValue, setInputValue] = useState("");
-  const handleClick = () => {
-    setInputValue("");
-    console.log("clicked a btn...");
-  };
+
   const handleChange = (event) => {
     setInputValue(event.target.value);
   };
@@ -21,7 +18,11 @@ const HeaderContainer = () => {
           setInputValue={setInputValue}
           handleChange={handleChange}
         />
-        <InputBtn handleClick={handleClick} />
+        <InputBtn
+          handleClick={() => {
+            todoHandler(inputValue);
+          }}
+        />
       </div>
     </div>
   );
