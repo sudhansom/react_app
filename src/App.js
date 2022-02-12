@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 import "./App.css";
-import Counter from "./Counter";
-import TodoPage from "./TodoPage";
+import Counter from "./components/Counter";
+import TodoPage from "./components/TodoPage";
 
 function App() {
   const [count, setCount] = useState(0);
