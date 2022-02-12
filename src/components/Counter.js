@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Header from "./Header";
 import Display from "./Display";
 import Button from "./Button";
 
-const Counter = ({ count, handleCount }) => {
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  const handleCount = (value) => {
+    setCount(count + value);
+  };
   return (
     <div>
       <Header title="React App" />
