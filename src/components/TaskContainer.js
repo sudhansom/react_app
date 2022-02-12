@@ -1,11 +1,20 @@
 import React from "react";
 import InputBtn from "./InputBtn";
 
-const TaskContainer = ({ title }) => {
+const TaskContainer = ({ title, setTodos, todos }) => {
+  const handleClick = (title) => {
+    const newTodos = todos.filter((todo) => todo !== title);
+    setTodos(newTodos);
+  };
   return (
-    <div>
+    <div className="allTasks">
       <h3>{title}</h3>
-      <InputBtn label="X" />
+      <InputBtn
+        handleClick={() => {
+          handleClick(title);
+        }}
+        label="X"
+      />
     </div>
   );
 };
