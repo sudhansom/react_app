@@ -1,9 +1,9 @@
 import React from "react";
 
-const InputBtn = () => {
+const InputBtn = ({ handleClick }) => {
   return (
     <div>
-      <button>Add Task</button>
+      <button onClick={handleClick}>Add Task</button>
     </div>
   );
 };
