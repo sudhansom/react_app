@@ -6,6 +6,7 @@ import InputBtn from "./InputBtn";
 const HeaderContainer = () => {
   const [inputValue, setInputValue] = useState("");
   const handleClick = () => {
+    setInputValue("");
     console.log("clicked a btn...");
   };
   const handleChange = (event) => {
