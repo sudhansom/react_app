@@ -23,6 +23,7 @@ const HeaderContainer = ({ todoHandler }) => {
             todoHandler(inputValue);
             setInputValue("");
           }}
+          label="Add Task"
         />
       </div>
     </div>

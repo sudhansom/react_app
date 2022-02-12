@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import TaskContainer from "./TaskContainer";
 
 import HeaderContainer from "./HeaderContainer";
 
@@ -13,6 +14,9 @@ const TodoPage = () => {
   return (
     <div>
       <HeaderContainer todoHandler={todoHandler} />
+      {todos.map((todo) => {
+        return <TaskContainer key={todo} title={todo}></TaskContainer>;
+      })}
     </div>
   );
 };
