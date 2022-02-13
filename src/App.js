@@ -1,14 +1,19 @@
 import React from "react";
 
 import "./App.css";
-import Counter from "./components/Counter";
-import TodoPage from "./components/TodoPage";
+// import Counter from "./components/Counter";
+// import TodoPage from "./components/TodoPage";
+import Home from "./country-components/Home";
+
+// hooks
+import useAllCountries from "./country-components/custom-hooks/useAllCountries";
 
 function App() {
+  const [err, data] = useAllCountries("https://restcountries.com/v2/all");
+  console.log("data", data);
   return (
     <div className="App">
-      <Counter />
-      <TodoPage />
+      <Home data={data} />
     </div>
   );
 }

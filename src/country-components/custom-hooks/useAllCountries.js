@@ -1,20 +1,23 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from "react";
 
+const useAllCountries = (allCountries_url) => {
+  const [data, setData] = useState([]);
+  const [err, setError] = useState();
 
-const useAllCountries = (url) => {
-    const [data, setData] = useState([])
+  useEffect(() => {
+    try {
+      const fetchCountries = async (allCountries_url) => {
+        const allCountries = await fetch(allCountries_url);
+        const result = await allCountries.json();
+        return result;
+      };
+      setData(fetchCountries(allCountries_url));
+    } catch (err) {
+      setError(err);
+    }
+  }, []);
 
-    useEffect(()=>{
-        const fetchCountries = sync( url ) => {
-            const allCountries = await fetch(url)
-            const result = await allCountries.json()
-            return result
-        }
-        setData(fetchCountries(url))
+  return [err, data];
+};
 
-    }, [])
-
-
-}
-
-export default useAllCountries
+export default useAllCountries;

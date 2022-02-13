@@ -1,9 +1,9 @@
 import React from "react";
 
-const home = () => {
+const home = ({ data }) => {
   return (
     <div>
-      <h1>This is a home page.</h1>
+      <p>{data.length ? data[0].name : "nothing"}</p>
     </div>
   );
 };
