@@ -7,6 +7,7 @@ const InputBtn = ({ handleClick, label }) => {
     buttonStyle: {
       color: "green",
       background: "lightblue",
+      border: 1,
     },
   });
   const classes = useStyle();
@@ -15,7 +16,9 @@ const InputBtn = ({ handleClick, label }) => {
       <MButton
         variant="contained"
         onClick={handleClick}
-        className={classes.buttonStyle}
+        //className={classes.buttonStyle}
+        border={1}
+        borderColor="red"
       >
         {label}
       </MButton>
