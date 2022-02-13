@@ -7,15 +7,17 @@ const useAllCountries = (allCountries_url) => {
   useEffect(() => {
     try {
       const fetchCountries = async (allCountries_url) => {
-        const allCountries = await fetch(allCountries_url);
-        const result = await allCountries.json();
+        const result = await fetch(allCountries_url).then((response) =>
+          response.json()
+        );
+        //const result = await allCountries.json();
         return result;
       };
       setData(fetchCountries(allCountries_url));
     } catch (err) {
       setError(err);
     }
-  }, []);
+  }, [err]);
 
   return [err, data];
 };

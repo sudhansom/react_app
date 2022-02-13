@@ -1,11 +1,11 @@
 import React from "react";
 
 const home = ({ data }) => {
-  return (
-    <div>
-      <p>{data.length ? data[0].name : "nothing"}</p>
-    </div>
-  );
+  console.log("data", data);
+  if (data.length > 0) {
+    return <p>success</p>;
+  }
+  return <p>failed to load countries</p>;
 };
 
 export default home;

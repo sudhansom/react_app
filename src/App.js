@@ -10,7 +10,7 @@ import useAllCountries from "./country-components/custom-hooks/useAllCountries";
 
 function App() {
   const [err, data] = useAllCountries("https://restcountries.com/v2/all");
-  console.log("data", data);
+
   return (
     <div className="App">
       <Home data={data} />
