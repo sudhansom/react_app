@@ -1,9 +1,8 @@
 import React from "react";
 
 const home = ({ data }) => {
-  console.log("data", data);
   if (data.length > 0) {
-    return <p>success</p>;
+    return data.map((country) => <p>{country.name}</p>);
   }
   return <p>failed to load countries</p>;
 };
