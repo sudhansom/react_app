@@ -4,7 +4,7 @@ const home = ({ data }) => {
   if (data.length > 0) {
     return data.map((country) => <p>{country.name}</p>);
   }
-  return <p>failed to load countries</p>;
+  return <p>Unexpected error occurred....</p>;
 };
 
 export default home;
