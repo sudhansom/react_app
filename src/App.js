@@ -12,8 +12,9 @@ import useOneCountry from "./country-components/custom-hooks/useOneCountry";
 function App() {
   const [err, data] = useAllCountries("https://restcountries.com/v2/all");
   const [err1, data1] = useOneCountry(
-    `https://restcountries.com/v3.1/name/${Nepal}`
+    `https://restcountries.com/v3.1/name/Nepal`
   );
+  console.log("Nepal: ", data1);
 
   return <div className="App">{data ? <Home data={data} /> : <></>}</div>;
 }
