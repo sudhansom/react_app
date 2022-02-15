@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import "./country.css";
+
 // hooks
 import useAllCountries from "./custom-hooks/useAllCountries";
 
@@ -21,6 +23,7 @@ function Home() {
         <Table>
           <TableHead>
             <TableRow>
+              <TableCell>Flag</TableCell>
               <TableCell>Name</TableCell>
               <TableCell>capital</TableCell>
               <TableCell>area</TableCell>
@@ -31,6 +34,9 @@ function Home() {
             {data.map((country) => {
               return (
                 <TableRow>
+                  <TableCell>
+                    <img src={country.flag} height="20em" />
+                  </TableCell>
                   <TableCell>
                     <Link to={`/country/${country.name}`}>{country.name}</Link>
                   </TableCell>
