@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "@material-ui/core/Button";
+
+// hooks
+import useAllCountries from "./custom-hooks/useAllCountries";
+
 import {
   Table,
   TableBody,
@@ -10,7 +13,8 @@ import {
   TableRow,
 } from "@material-ui/core/";
 
-const home = ({ data }) => {
+function Home() {
+  const [err, data] = useAllCountries("https://restcountries.com/v2/all");
   if (data.length > 0) {
     return (
       <div>
@@ -42,7 +46,7 @@ const home = ({ data }) => {
     );
   }
   return <p>Unexpected error occurred....</p>;
-};
+}
 
 // {
 //   data.map((country) => {
@@ -55,6 +59,6 @@ const home = ({ data }) => {
 //   });
 // }
 
-export default home;
+export default Home;
 
 //data.map((country) => <p>{country.name}</p>);
