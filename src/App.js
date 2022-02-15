@@ -1,4 +1,5 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
 
 import "./App.css";
 // import Counter from "./components/Counter";
@@ -16,7 +17,20 @@ function App() {
   );
   console.log("Nepal: ", data1);
 
-  return <div className="App">{data ? <Home data={data} /> : <></>}</div>;
+  return (
+    <div className="App">
+      <Switch>
+        <Route exact path="/">
+          <h1>HOme page</h1>
+        </Route>
+        <Route exact path="/about">
+          <h1>About page</h1>
+        </Route>
+      </Switch>
+    </div>
+  );
 }
 
 export default App;
+
+// {data ? <Home data={data} /> : <></>}
