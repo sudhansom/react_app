@@ -16,7 +16,7 @@ const useAllCountries = (allCountries_url) => {
     } catch (err) {
       setError(err);
     }
-  }, [err]);
+  }, [allCountries_url]);
 
   return [err, data];
 };
