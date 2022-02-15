@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
 // import Counter from "./components/Counter";
@@ -19,14 +19,14 @@ function App() {
 
   return (
     <div className="App">
-      <Switch>
+      <Routes>
         <Route exact path="/">
           <h1>HOme page</h1>
         </Route>
         <Route exact path="/about">
           <h1>About page</h1>
         </Route>
-      </Switch>
+      </Routes>
     </div>
   );
 }
