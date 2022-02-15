@@ -25,9 +25,9 @@ function Home() {
             <TableRow>
               <TableCell>Flag</TableCell>
               <TableCell>Name</TableCell>
-              <TableCell>capital</TableCell>
-              <TableCell>area</TableCell>
-              <TableCell>currency</TableCell>
+              <TableCell>Capital</TableCell>
+              <TableCell>Area</TableCell>
+              <TableCell>Languages</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -42,7 +42,7 @@ function Home() {
                   </TableCell>
                   <TableCell>{country.capital}</TableCell>
                   <TableCell>{country.area}</TableCell>
-                  <TableCell>currency</TableCell>
+                  <TableCell>{country.languages[0].name}</TableCell>
                 </TableRow>
               );
             })}
