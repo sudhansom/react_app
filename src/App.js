@@ -20,12 +20,8 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route exact path="/">
-          <h1>HOme page</h1>
-        </Route>
-        <Route exact path="/about">
-          <h1>About page</h1>
-        </Route>
+        <Route exact path="/" element={<h1>HOme page</h1>}></Route>
+        <Route exact path="/about" element={<h1>About page</h1>}></Route>
       </Routes>
     </div>
   );
