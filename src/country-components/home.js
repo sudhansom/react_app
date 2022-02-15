@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import {
   Table,
@@ -26,7 +27,9 @@ const home = ({ data }) => {
             {data.map((country) => {
               return (
                 <TableRow>
-                  <TableCell>{country.name}</TableCell>
+                  <TableCell>
+                    <Link to={`/country/${country.name}`}>{country.name}</Link>
+                  </TableCell>
                   <TableCell>{country.capital}</TableCell>
                   <TableCell>{country.area}</TableCell>
                   <TableCell>currency</TableCell>

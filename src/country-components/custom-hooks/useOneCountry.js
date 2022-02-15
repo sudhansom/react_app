@@ -9,8 +9,8 @@ const useOneCountry = (oneCountry_url) => {
     try {
       const fetchCountries = async (oneCountry_url) => {
         const result = await axios.get(oneCountry_url);
-        console.log("in custom hook:", result);
-        setData(result.data);
+        console.log("in custom hook one Country:", result);
+        setData(result.data[0]);
       };
       fetchCountries(oneCountry_url);
     } catch (err) {
