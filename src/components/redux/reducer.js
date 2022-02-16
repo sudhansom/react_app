@@ -14,6 +14,14 @@ const reducer = (state = defaultState, action) => {
         ...state,
         count: state.count + 1,
       };
+    case "INCREMENT_BY_VALUE":
+      return {
+        count: state.count + action.payload,
+      };
+    case "DECREMENT_BY_VALUE":
+      return {
+        count: state.count - action.payload,
+      };
 
     default:
       return state;
