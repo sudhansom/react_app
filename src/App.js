@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
-// import Counter from "./components/Counter";
+import Counter from "./components/Counter";
 // import TodoPage from "./components/TodoPage";
 
 import Home from "./country-components/Home";
@@ -13,6 +13,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route exact path="/" element={<Home></Home>}></Route>
+        <Route exact path="/counter" element={<Counter></Counter>}></Route>
         <Route
           exact
           path="/country/:countryName"

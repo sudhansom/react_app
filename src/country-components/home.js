@@ -22,12 +22,12 @@ function Home() {
       <div>
         <Table>
           <TableHead>
-            <TableRow>
+            <TableRow className="TableHead">
               <TableCell>Flag</TableCell>
               <TableCell>Name</TableCell>
               <TableCell>Capital</TableCell>
               <TableCell>Area</TableCell>
-              <TableCell>Languages</TableCell>
+              <TableCell>Language</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -35,7 +35,7 @@ function Home() {
               return (
                 <TableRow>
                   <TableCell>
-                    <img src={country.flag} height="20em" />
+                    <img src={country.flag} height="30em" />
                   </TableCell>
                   <TableCell>
                     <Link to={`/country/${country.name}`}>{country.name}</Link>
