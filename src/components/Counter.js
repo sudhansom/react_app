@@ -5,8 +5,6 @@ import Header from "./Header";
 import Display from "./Display";
 import Button from "./Button";
 
-import { increment, decrement } from "./redux/action";
-
 const Counter = () => {
   const dispatch = useDispatch();
   const count = useSelector((state) => state.count);
