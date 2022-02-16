@@ -1,14 +1,19 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import Header from "./Header";
 import Display from "./Display";
 import Button from "./Button";
 
+import { increment, decrement } from "./redux/action";
+
 const Counter = () => {
-  const [count, setCount] = useState(0);
+  const dispatch = useDispatch();
+  const count = useSelector((state) => state.count);
+  //const [count, setCount] = useState(0);
 
   const handleCount = (value) => {
-    setCount(count + value);
+    dispatch(value());
   };
   return (
     <div>
