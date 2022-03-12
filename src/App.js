@@ -12,10 +12,9 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route exact path="/" element={<Home></Home>}></Route>
-        <Route exact path="/counter" element={<Counter></Counter>}></Route>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/counter" element={<Counter></Counter>}></Route>
         <Route
-          exact
           path="/country/:countryName"
           element={<CountryDetail></CountryDetail>}
         ></Route>
